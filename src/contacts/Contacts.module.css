@@ -1,13 +1,13 @@
 
 
-.skillsBlock{
+.contactsBlock{
     min-height: 100vh;
     background-color: antiquewhite;
 
 
 }
 
-.skillsContainer{
+.contactsContainer{
 
     flex-direction: column;
     justify-content: flex-start;
@@ -22,11 +22,28 @@
     margin: 10px 0;
 }
 
-.skills{
-    border: 1px solid;
-    width: 100%;
+.contactsForm{
+    border:1px solid;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 280px;
+
+
+}
+
+.contactsForm input{
+    margin-bottom: 5px;
+
+
+
+}
+
+.button{
+    margin-top: 15px;
+    padding: 7px 25px;
+    border:1px solid;
+    font-size: 16px;
+
 
 }
