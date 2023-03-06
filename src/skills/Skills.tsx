@@ -3,6 +3,7 @@ import s from './Skills.module.css'
 import container from '../common/styles/Container.module.css'
 import {Skill} from "./skill/Skill";
 import {v1} from "uuid";
+import {Title} from "../common/components/title/Title";
 
 export type SkillsType = {
     id: string
@@ -38,7 +39,8 @@ export const Skills = () => {
     return (
         <div className={s.skillsBlock}>
             <div className={container.container + ' ' + s.skillsContainer}>
-                <h2 className={s.title}>My skills</h2>
+                {/*<h2 className={s.title}>My skills</h2>*/}
+                <Title title={'Skills'}/>
                 <div className={s.skills}>
                     {skills.map(skill => {
                         return (<Skill

@@ -1,21 +1,32 @@
 import React from 'react';
 import s from './Project.module.css'
-import {WorksType} from "../Works";
 
 
-export const Project = (props:WorksType) => {
+export type ProjectPropsType = {
+    id: string
+    title: string
+    description: string
+    picture:string
+
+}
+
+export const Project = (props:ProjectPropsType) => {
     return (
         <div className={s.projectBlock}>
-            <div className={s.imgContainer}>
+            <div className={s.imgContainer} style={{backgroundImage:props.picture}} >
 
-                <div className={s.referenceToView}>
-                    <a href={'#'}>view</a>
+
+
+                <div className={s.corner}>
+                    <a className={s.referenceToView} href={'#'}>view</a>
+                    <div className={s.arrow}></div>
                 </div>
+
 
             </div>
 
-            <span className={s.title}>{props.title}</span>
-            <span className={s.description}>{props.description}</span>
+            <h3 className={s.projectTitle}>{props.title}</h3>
+            <p className={s.description}>{props.description}</p>
 
         </div>
     );

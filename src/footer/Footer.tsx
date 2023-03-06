@@ -1,9 +1,30 @@
 import React from 'react';
 import s from './Footer.module.css'
 import container from '../common/styles/Container.module.css'
+import {v1} from "uuid";
 
 
 export const Footer = () => {
+
+
+    const iconForFooter=[
+        {
+            id:v1(),
+            icon:'icon_1'
+        },
+        {
+            id:v1(),
+            icon:'icon_2'
+        },
+        {
+            id:v1(),
+            icon:'icon_3'
+        },
+        {
+            id:v1(),
+            icon:'icon_4'
+        },
+    ]
 
 
     return (
@@ -11,19 +32,12 @@ export const Footer = () => {
             <div className={container.container + ' ' + s.footerContainer}>
                 <h2 className={s.title}>My Last and first name</h2>
                 <div className={s.footerIcon}>
-                    <div className={s.icon}>icon_1</div>
-                    <div className={s.icon}>icon_2</div>
-                    <div className={s.icon}>icon_3</div>
-                    <div className={s.icon}>icon_4</div>
-                </div>
-                <span className={s.spamInFooter}>
-                    © 2023 All rights reserved
-                </span>
+                    {iconForFooter.map(i=><div key={i.id} className={s.icon}>{i.icon}</div>)}
 
+                </div>
+                <span className={s.copyright}> © 2023 All rights reserved </span>
 
             </div>
-
-
         </div>
     );
 };

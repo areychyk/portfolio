@@ -27,13 +27,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 280px;
+    /*width: 280px;*/
+    width: 60%;
 
 
 }
 
-.contactsForm input{
+.contactsForm input, .contactsForm textarea{
     margin-bottom: 5px;
+    width: 100%;
 
 
 
@@ -45,5 +47,15 @@
     border:1px solid;
     font-size: 16px;
 
+
+}
+
+@media screen and (max-width: 400px ){
+    .contactsForm{
+
+        width: 100%;
+
+
+    }
 
 }

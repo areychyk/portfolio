@@ -8,7 +8,7 @@ export const Skill = (props:SkillsType) => {
         <div className={s.skillBlock}>
             <div className={s.icon}></div>
             <h3 className={s.title}>{props.title}</h3>
-            <span className={s.description}>{props.description}</span>
+            <p className={s.description}>{props.description}</p>
 
         </div>
     );
