@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './Works.module.css'
+import s from './Works.module.scss'
 import container from '../common/styles/Container.module.css'
-import {Project} from "./work/Project";
+import {Project} from "./project/Project";
 import {v1} from "uuid";
 import {Title} from "../common/components/title/Title";
 

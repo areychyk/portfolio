@@ -1,0 +1,139 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.projectBlock {
+  width: 450px;
+  background-color: $dgColor;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  .imgContainer {
+    /*width: 100%;*/
+    height: 300px;
+    /*border: 1px solid;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: palegoldenrod;*/
+    /*background-image: url("https://appinventiv.com/wp-content/uploads/sites/1/2021/04/Social-Networking-Apps.png");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.4;
+    }
+
+    .corner {
+      display: block;
+      position: relative;
+      border-radius: 0;
+      /*border: 1px solid #E5E5E5;*/
+      padding: 10px 20px;
+      margin: 0;
+      text-decoration: none;
+      z-index: 1;
+      overflow: hidden;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: black;
+        height: 15px;
+        width: 15px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.25s ease-out;
+      }
+
+      &:hover:before {
+        transform: scale(21);
+      }
+
+      &:hover a {
+        transition: all 0.3s ease-out;
+        color: white;
+      }
+
+      .referenceToView {
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $textColor;
+      }
+
+      .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        /*width: 70px;*/
+        /*height: 40px;*/
+        overflow: hidden;
+        top: 0px;
+        right: 0;
+        background-color: $textColor;
+        transform: translateX(52%) translateY(-26%) rotate(45deg);
+      }
+    }
+  }
+
+  .projectTitle {
+    //font-size: 18px;
+    //line-height: 22px;
+    //font-weight: 500;
+    //color: $textColor;
+
+    @include text(18px, 22px, 500, $textColor);
+
+    text-align: center;
+    padding: 20px 0;
+
+    margin-top: 0;
+
+
+  }
+
+  .description {
+    //font-size: 16px;
+    //line-height: 24px;
+    //font-weight: 400;
+    //color: $descriptionColor;
+
+    @include text(16px, 24px, 400, $descriptionColor);
+    margin-top: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
