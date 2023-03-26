@@ -1,22 +1,30 @@
 import React from 'react';
-import s from './Main.module.css';
-import container from '../common/styles/Container.module.css'
+import s from './Main.module.scss';
+
 
 
 export const Main = () => {
     return (
-        <div className={s.mainBlock}>
-            <div className={container.container}>
-            <div className={s.aboutMe}>
-                <span>Hi</span>
-                <h1>I am first name and last name </h1>
-                <p>Information about me</p>
+        <section id={'main'} className={s.main}>
+                <div className={`container` + ' ' + s.mainContainer}>
+                <div>
+                    <p>Hi, there!</p>
+                    <h1>My name is</h1>
+                    <h1>Denis Aryichuk.</h1>
+                    <p>I'm frontend developer</p>
+                    <p>
+                        You can find more information about me in my{' '}
+                        <a
+                            rel='noreferrer'
+                            target={'_blank'}
+                            href={'#'}>
+                            CV
+                        </a>
+                    </p>
+                </div>
+                <div className={s.photo} />
             </div>
-            <div className={s.photo}></div>
-
-            </div>
-
-        </div>
+        </section>
     );
 };
 

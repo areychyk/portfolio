@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Contacts.module.css'
-import container from '../common/styles/Container.module.css'
+
 import {Title} from "../common/components/title/Title";
 
 
@@ -9,7 +9,7 @@ export const Contacts = () => {
 
     return (
         <div className={s.contactsBlock}>
-            <div className={container.container + ' ' + s.contactsContainer}>
+            <div className={`container` + ' ' + s.contactsContainer}>
                 {/*<h2 className={s.title}>My contacts</h2>*/}
                 <Title title={'Contacts'}/>
                 <form action="" className={s.contactsForm}>

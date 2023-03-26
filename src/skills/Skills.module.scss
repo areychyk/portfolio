@@ -1,0 +1,47 @@
+
+
+.skillsBlock{
+    min-height: 100vh;
+    padding: 80px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--color-text);
+
+    .skillsContainer{
+
+        //flex-direction: column;
+        //justify-content: flex-start;
+        //flex-wrap: nowrap;
+
+
+        .title{
+            border: 1px solid;
+            background-color: gray;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .skills{
+            row-gap: 30px;
+            margin: 0 -15px;
+
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+        }
+
+
+    }
+
+}
+
+
+

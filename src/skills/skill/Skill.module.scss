@@ -1,0 +1,49 @@
+.skillBlock {
+    min-width: 320px;
+    flex: 1 1 25%;
+    padding: 0 15px;
+
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        row-gap: 30px;
+        text-align: center;
+
+        .title {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+
+    .square {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background: #2b2b2b;
+        //@include flex(row, center, center);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+
+        svg {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+    }
+
+    &:nth-last-of-type(1) {
+        svg path {
+            color: #66bb6a;
+        }
+    }
+}
+

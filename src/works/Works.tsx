@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Works.module.scss'
-import container from '../common/styles/Container.module.css'
+
 import {Project} from "./project/Project";
 import {v1} from "uuid";
 import {Title} from "../common/components/title/Title";
@@ -57,7 +57,7 @@ export const Works = () => {
 
     return (
         <div className={s.worksBlock}>
-            <div className={container.container + ' ' + s.worksContainer}>
+            <div className={`container` + ' ' + s.worksContainer}>
                 <Title title={'Works'}/>
 
                 <div className={s.works}>

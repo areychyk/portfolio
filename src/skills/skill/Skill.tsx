@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Skill.module.css'
+import s from './Skill.module.scss'
 import {IconType} from "react-icons";
 
 
@@ -32,15 +32,6 @@ export const Skill = (props:SkillPropsType) => {
 };
 
 
-// export const Skill = (props:SkillsType) => {
-//     return (
-//         <div className={s.skillBlock}>
-//             <div className={s.icon}></div>
-//             <h3 className={s.title}>{props.title}</h3>
-//             <p className={s.description}>{props.description}</p>
-//
-//         </div>
-//     );
-// };
+
 
 
