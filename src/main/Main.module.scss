@@ -1,16 +1,24 @@
 
 
 .main {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    //height: calc(100vh - 80px);
+
+    //min-height: 100vh;
     color: var(--color-text);
+
     padding-top: 20px;
+    @media screen and (min-width: 860px) {
+        min-height: 100vh;
+
+    }
 
     .mainContainer {
 
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         height: 100%;
         @media (max-width: 997px) {
@@ -18,7 +26,7 @@
         }
     }
 
-    h1 {
+    h1, h2 {
         font-size: 3.125rem;
         font-weight: 700;
         padding: 10px 0;
@@ -47,6 +55,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        @media (max-width: 997px) {
+            margin-top: 25px;
+        }
 
     }
 

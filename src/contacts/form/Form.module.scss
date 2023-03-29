@@ -43,7 +43,16 @@
     resize: vertical;
     max-height: 180px;
   }
-
+  .btn {
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 1.5rem;
+    max-width: 160px;
+    min-width: 160px;
+    position: relative;
+    padding: 8px;
+    text-align: center;
+  }
 
 
 }

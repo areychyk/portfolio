@@ -1,5 +1,3 @@
-
-
 import s from './Form.module.scss'
 
 export const Form = () => {
@@ -10,17 +8,12 @@ export const Form = () => {
                 className={`${s.field}`}
                 type='text'
             />
-
             <input
                 className={`${s.field}`}
-                type='email'
+                type='text'
             />
-
-            <textarea
-
-                className={`${s.textarea} ${s.field}`}></textarea>
-
-            {/*<Button type={'submit'}>Send</Button>*/}
+            <textarea className={`${s.textarea} ${s.field}`}></textarea>
+            <button className={s.btn}>Send</button>
 
         </form>
     )

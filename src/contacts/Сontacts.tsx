@@ -13,7 +13,7 @@ export const Contacts = () => {
     })
 
     return (
-        <section className={s.contact}>
+        <section id={'contacts'} className={s.contact}>
             <div className={`container ${s.container}`}>
                <Title title={'Contacts'}/>
                 <div className={s.forms}>
