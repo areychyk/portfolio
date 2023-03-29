@@ -1,0 +1,56 @@
+
+
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--color-text);
+
+
+.list {
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 30px;
+
+
+&:not(:last-child) {
+     margin-bottom: 25px;
+ }
+
+.item {
+    width: 50px;
+    height: 50px;
+
+
+
+svg {
+
+    color: #000000;
+    transition: color .3s ease;
+}
+
+.cd:hover {
+    color: #bb432c;
+}
+
+.tg:hover {
+    color: #0088cc;
+}
+
+.git:hover {
+    color: #000000;
+}
+
+.link:hover {
+    color: #0077b5;
+}
+}
+
+}
+
+}

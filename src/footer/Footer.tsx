@@ -1,44 +1,32 @@
 import React from 'react';
-import s from './Footer.module.css'
+import s from './Footer.module.scss'
+import {Title} from "../common/components/title/Title";
+import { footer } from './footer.data'
 
-import {v1} from "uuid";
+
 
 
 export const Footer = () => {
 
 
-    const iconForFooter=[
-        {
-            id:v1(),
-            icon:'icon_1'
-        },
-        {
-            id:v1(),
-            icon:'icon_2'
-        },
-        {
-            id:v1(),
-            icon:'icon_3'
-        },
-        {
-            id:v1(),
-            icon:'icon_4'
-        },
-    ]
-
-
     return (
-        <div className={s.footerBlock}>
-            <div className={`container`  + ' ' + s.footerContainer}>
-                <h2 className={s.title}>My Last and first name</h2>
-                <div className={s.footerIcon}>
-                    {iconForFooter.map(i=><div key={i.id} className={s.icon}>{i.icon}</div>)}
-
-                </div>
-                <span className={s.copyright}> © 2023 All rights reserved </span>
-
+        <footer className={s.footer}>
+            <div className={`container`}>
+                <Title title={'Denis Aryichuk'}/>
+                <ul className={s.list}>
+                    {footer.map(({ link, id, Icon, prefix }) => {
+                        return (
+                            <li key={id} className={s.item}>
+                                <a rel='noreferrer' target={'_blank'} href={link}>
+                                    <Icon className={`${s[`${prefix}`]}`} size={50} />
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <p className={s.copy}>&copy; {new Date().getFullYear()} All rights reserved.</p>
             </div>
-        </div>
-    );
+        </footer>
+    )
 };
 

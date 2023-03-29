@@ -56,7 +56,7 @@ export const Works = () => {
     // console.log(typeof works[0].picture)
 
     return (
-        <div className={s.worksBlock}>
+        <section id={'works'} className={s.worksBlock}>
             <div className={`container` + ' ' + s.worksContainer}>
                 <Title title={'Works'}/>
 
@@ -78,7 +78,7 @@ export const Works = () => {
             </div>
 
 
-        </div>
+        </section>
     );
 };
 

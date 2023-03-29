@@ -1,29 +1,27 @@
 import React from 'react';
-import s from './Contacts.module.css'
+import s from './Contacts.module.scss'
 
 import {Title} from "../common/components/title/Title";
+import {Info} from "./info/Info";
+import {contacts} from "./contacts.data";
+import Form from "./form/Form";
 
 
 export const Contacts = () => {
-
+    const contactsItems = contacts.map((contact) => {
+        return <Info key={contact.link} {...contact} />
+    })
 
     return (
-        <div className={s.contactsBlock}>
-            <div className={`container` + ' ' + s.contactsContainer}>
-                {/*<h2 className={s.title}>My contacts</h2>*/}
-                <Title title={'Contacts'}/>
-                <form action="" className={s.contactsForm}>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <textarea name="text"></textarea>
-                    <button type={'submit'} className={s.button}>Send</button>
-                </form>
-
-
+        <section className={s.contact}>
+            <div className={`container ${s.container}`}>
+               <Title title={'Contacts'}/>
+                <div className={s.forms}>
+                    <ul className={s.list}>{contactsItems}</ul>
+                    <Form />
+                </div>
             </div>
-
-
-        </div>
-    );
+        </section>
+    )
 };
 
